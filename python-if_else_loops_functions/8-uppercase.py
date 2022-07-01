@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 def uppercase(c):
     for i in c:
         if(ord(i) > 90):
