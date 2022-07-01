@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def uppercase(c):
+    uppercaseword = ''
     for i in c:
         if(ord(i) > 90):
-            print('{}'.format(chr(ord(i) - 32)), end='')
+            uppercaseword = uppercaseword + chr(ord(i) - 32)
         else:
-            print('{}'.format(i), end='')
-    else:
-        print('')
+            uppercaseword = uppercaseword + i
+    print('{}'.format(uppercaseword))
