@@ -2,8 +2,8 @@
 def uppercase(c):
     for i in c:
         if(ord(i) > 90):
-            print(chr(ord(i) - 32), end='')
+            print('{}'.format(chr(ord(i) - 32)), end='')
         else:
-            print(i, end='')
+            print('{}'.format(i), end='')
     else:
         print('')
