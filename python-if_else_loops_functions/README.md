@@ -25,3 +25,9 @@ it defines a function that adds two integers and returns the result.
 it defines a function that computes a to the power of b and return the value.
 ### 12-fizzbuzz.py
 it defines a function that prints the numbers from 1 to 100 separated by a space.
+### 100-print_tebahpla.py
+it prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.
+### 101-remove_char_at.py
+it defines a function that creates a copy of the string, removing the character at the position n.
+### 102-magic_calculation.py
+it contains a more complex magic_calculation function
