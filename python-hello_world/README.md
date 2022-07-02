@@ -19,3 +19,5 @@ The python script deals with Copy - Cut - Paste
 The python script prints object-oriented programming with Python, followed by a new line.
 ### 9-easter_egg.py
 The python script prints “The Zen of Python”, by TimPeters, followed by a new line.
+### 100-write.py
+The script prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line using sys module write function
