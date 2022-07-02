@@ -23,3 +23,5 @@ The python script prints “The Zen of Python”, by TimPeters, followed by a ne
 The script prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line using sys module write function.
 ### 101-compile
 The script compiles a Python script file.
+### 102-magic_calculation.py
+The script contains the magic_calculation function
