@@ -4,5 +4,4 @@ def magic_calculation(a, b, c):
         return c
     elif c > b:
         return a + b
-    else:
-        return
+    return (a * b) - c
