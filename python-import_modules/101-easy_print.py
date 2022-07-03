@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-import easy_print
-easy_print.customwrite("#pythoniscool")
+__import__("easy_print").customwrite("#pythoniscool")
