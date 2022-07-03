@@ -1,4 +1,8 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     import sys
-    print('{}'.format(int(sys.argv[1]) + int(sys.argv[2]) ))
+    sum = 0
+    for i in range(1, len(sys.argv)):
+        sum = sum + int(sys.argv[i])
+        
+    print('{}'.format(sum))
