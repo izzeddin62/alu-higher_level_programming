@@ -25,3 +25,9 @@ defines a function that returns a key with the biggest integer value.
 defines a function that returns a list with all values multiplied by a number without using any loops.
 ### 12-roman_to_int.py
 defines a function that converts a Roman numeral to an integer.
+### 100-weight_average.py
+defines a function that returns the weighted average of all integers tuple
+### 101-square_matrix_map.py
+defines a function that computes the square value of all integers of a matrix using map
+### 102-complex_delete.py
+defines a function that deletes keys with a specific value in a dictionary.
