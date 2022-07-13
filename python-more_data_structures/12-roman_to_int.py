@@ -6,9 +6,13 @@ def roman_to_int(roman_string):
                      "M": 1000, "IV": 4, "IX": 9, "XL": 40, "XC": 90,
                      "CD": 400, "CD": 900}
     integer_number = 0
-    for i in range(len(roman_string)):
+    i = 0
+    while i < len(roman_string):
         if roman_string[i:i+2] in sorted(roman_numbers):
-            integer_number = integer_number + roman_numbers[roman_string[i:i+2]]
+            integer_number = integer_number + \
+            roman_numbers[roman_string[i:i+2]]
+            i = i + 2
         else:
             integer_number = integer_number + roman_numbers[roman_string[i]]
+            i = i + 1
     return integer_number
