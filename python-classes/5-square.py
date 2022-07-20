@@ -43,7 +43,7 @@ class Square:
     def my_print(self):
         """shows the square area on the stdout using #"""
         i = 0
-        if self.__square == 0:
+        if self.__size == 0:
             print("")
         else:
             while i < self.__size:
