@@ -56,7 +56,7 @@ class Square:
                 raise TypeError(returned_error)
             else:
                 self.__position = position
-        except IndexError:
+        except (IndexError, TypeError):
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
