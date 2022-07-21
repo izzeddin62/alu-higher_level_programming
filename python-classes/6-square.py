@@ -51,9 +51,9 @@ class Square:
             type_check = type(position[0]) != int or type(position[1]) != int
             position_check = position[0] < 0 or position[1] < 0
             if is_position or type_check or position_check:
-                raise TypeError(
-                                "position must be a tuple of"
-                                "2 positive integers")
+                first_part = "position must be a tuple"
+                returned_error = f"{first_part} of 2 positive integers"
+                raise TypeError(returned_error)
             else:
                 self.__position = position
         except IndexError:
