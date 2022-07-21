@@ -47,8 +47,12 @@ class Square:
             position (tuple): new position value
         """
         try:
-            if type(position) != tuple or len(position) != 2 or type(position[0]) != int or type(position[1]) != int or position[0] < 0 or position[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
+            if type(position) != tuple or len(position) != 2 or \
+                type(position[0]) != int or type(position[1]) != int or \
+                    position[0] < 0 or position[1] < 0:
+                raise TypeError(
+                                "position must be a tuple of"
+                                "2 positive integers")
             else:
                 self.__position = position
         except IndexError:
@@ -61,9 +65,12 @@ class Square:
             print("")
         else:
             printed_square = ""
-            while i < self.__size:                
-                printed_square += (" " * self.__position[0]) + ("#" * self.__size) + "\n"
+            while i < self.__size:
+                position = " " * self.__position[0]
+                size = "#" * self.__size
+                printed_square += position + size + "\n"
                 i += 1
             if(self.__position[1]) > 0:
-                for i in range(self.__position[1]):print("")
+                for i in range(self.__position[1]):
+                    print("")
             print(printed_square, end="")
