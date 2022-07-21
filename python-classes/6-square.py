@@ -60,6 +60,10 @@ class Square:
         if self.__size == 0:
             print("")
         else:
-            while i < self.__size:
-                print("#" * self.__size)
+            printed_square = ""
+            while i < self.__size:                
+                printed_square += (" " * self.__position[0]) + ("#" * self.__size) + "\n"
                 i += 1
+            if(self.__position[1]) > 0:
+                for i in range(self.__position[1]):print("")
+            print(printed_square, end="")
