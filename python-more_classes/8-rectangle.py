@@ -19,7 +19,7 @@ class Rectangle:
         if type(rect_1) != Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif type(rect_2) != Rectangle:
-            raise Type("rect_2 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
         else:
             if rect_1.area() >= rect_2.area():
                 return rect_1
