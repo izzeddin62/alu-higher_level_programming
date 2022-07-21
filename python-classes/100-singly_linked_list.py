@@ -66,11 +66,13 @@ class SinglyLinkedList:
         if self.__head is None:
             self.__head = node
         else:
-            if self.__head.next_node is None:
-                self.__head.next_node = node
-            elif node.data < self.__head.data:
+            print("I got here", node.data, self.__head.data)
+            if node.data < self.__head.data:
+                print("I got here", node.data, self.__head.data)
                 node.next_node = self.__head
                 self.__head = node
+            elif self.__head.next_node is None:
+                self.__head.next_node = node
             elif node.data == self.__head.data:
                 node.next_node = self.__head.next_node
                 self.__head.next_node = node
