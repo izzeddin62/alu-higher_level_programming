@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """defines Square class"""
 
+
 class Square:
-    """It represents a square"""
+    """It represents a square, calculate the square area"""
     def __init__(self, size=0, position=(0, 0)):
         """set the square size
-
         Args:
             size (int, optional)
             position(tuple, optional)
@@ -25,7 +25,6 @@ class Square:
     @size.setter
     def size(self, size):
         """set size property
-
         Args:
             size (int): represent the new size
         """
@@ -44,9 +43,8 @@ class Square:
     @position.setter
     def position(self, position):
         """set the position attribute
-
         Args:
-            position (tuple)
+            position (tuple): new position value
         """
         try:
             if type(position) != tuple or len(position) != 2 or
