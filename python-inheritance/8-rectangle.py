@@ -6,7 +6,7 @@ BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 class Rectangle(BaseGeometry):
     """create a rectange"""
-    
+
     def __init__(self, width, height):
         """instatiate a rectangle object"""
         self.integer_validator("height", height)
