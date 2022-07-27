@@ -4,3 +4,5 @@
 >>> x.append(2)
 >>> x.print_sorted()
 [2, 3]
+>>> print(x)
+[3, 2]
