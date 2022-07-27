@@ -13,3 +13,5 @@ defines a function that returns True if the object is an instance of a class tha
 defines an empty class BaseGeometry
 ### 6-base_geometry.py
 defines a BaseGeometry class that defines a area method(not implemented yet)
+### 7-base_geometry.py
+adds integer validator method on the BaseGeometry class
