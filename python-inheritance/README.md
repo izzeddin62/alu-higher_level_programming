@@ -15,3 +15,5 @@ defines an empty class BaseGeometry
 defines a BaseGeometry class that defines a area method(not implemented yet)
 ### 7-base_geometry.py
 adds integer validator method on the BaseGeometry class
+### 8-rectangle.py
+defines a class Rectangle that inherits from BaseGeometry
