@@ -17,3 +17,5 @@ defines a BaseGeometry class that defines a area method(not implemented yet)
 adds integer validator method on the BaseGeometry class
 ### 8-rectangle.py
 defines a class Rectangle that inherits from BaseGeometry
+### 9-rectangle.py
+defines a Rectangle with an implemented area method
