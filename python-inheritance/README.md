@@ -24,3 +24,5 @@ defines a Square class(inherits Rectangle class fro 9-rectangle.py) with attribu
 ### 11-square.py
 defines a Square class(inherits Rectangle class fro 9-rectangle.py) with attribute size and an implemented area method
 and return square string
+### 100-my_int.py
+defines MyInt class(inherits the int class) that inverse the == and !==
