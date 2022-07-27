@@ -18,4 +18,6 @@ adds integer validator method on the BaseGeometry class
 ### 8-rectangle.py
 defines a class Rectangle that inherits from BaseGeometry
 ### 9-rectangle.py
-defines a Rectangle with an implemented area method
+defines a Rectangle class with an implemented area method
+### 10-square.py
+defines a Square class(inherits Rectangle class fro 9-rectangle.py) with attribute size and an implemented area method
