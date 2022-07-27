@@ -6,9 +6,9 @@
 [2, 3]
 >>> print(x)
 [3, 2]
->>> z = MyList([])
->>> print(z)
+>>> x = MyList()
+>>> x.print_sorted()
 []
->>> y = MyList([4, -4])
->>> y.print_sorted()
+>>> x = MyList([4, -4])
+>>> x.print_sorted()
 [-4, 4]
