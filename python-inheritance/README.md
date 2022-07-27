@@ -21,3 +21,6 @@ defines a class Rectangle that inherits from BaseGeometry
 defines a Rectangle class with an implemented area method
 ### 10-square.py
 defines a Square class(inherits Rectangle class fro 9-rectangle.py) with attribute size and an implemented area method
+### 11-square.py
+defines a Square class(inherits Rectangle class fro 9-rectangle.py) with attribute size and an implemented area method
+and return square string
