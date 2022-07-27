@@ -26,3 +26,5 @@ defines a Square class(inherits Rectangle class fro 9-rectangle.py) with attribu
 and return square string
 ### 100-my_int.py
 defines MyInt class(inherits the int class) that inverse the == and !==
+### 101-add_attribute.py
+defines a add_attribute function that adds an attribute to an object if it possible
