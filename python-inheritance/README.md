@@ -11,4 +11,5 @@ defines a function that returns True if the object is an instance of, or if the 
 defines a function that returns True if the object is an instance of a class that inherited (directly or indirectly) from the specified class ; otherwise False.
 ### 5-base_geometry.py
 defines an empty class BaseGeometry
-
+### 6-base_geometry.py
+defines a BaseGeometry class that defines a area method(not implemented yet)
