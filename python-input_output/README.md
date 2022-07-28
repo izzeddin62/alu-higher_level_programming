@@ -13,3 +13,5 @@ a function that returns an object (Python data structure) represented by a JSON 
 a function that writes an Object to a text file, using a JSON representation
 ### 6-load_from_json_file.py
 a function that creates an Object from a “JSON file”
+### 7-add_item.py
+a script that adds all arguments to a Python list, and then save them to a file:
