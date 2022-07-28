@@ -23,3 +23,5 @@ defines a class Student that defines a student
 defines a class Student that defines a student that implements a to_json with argument attr
 ### 11-student.py
 defines a class Student that defines a student that implement serialize and deserialize methods
+### 12-pascal_triangle.py
+defines a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n
