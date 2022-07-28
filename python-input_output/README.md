@@ -17,3 +17,5 @@ a function that creates an Object from a “JSON file”
 a script that adds all arguments to a Python list, and then save them to a file:
 ### 8-class_to_json.py
 function that returns the dictionary description with simple data structure (list, dictionary, string, integer and boolean) for JSON serialization of an object
+### 9-student.py
+defines a class Student that defines a student 
