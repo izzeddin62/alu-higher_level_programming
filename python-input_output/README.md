@@ -21,3 +21,5 @@ function that returns the dictionary description with simple data structure (lis
 defines a class Student that defines a student 
 ### 10-student.py
 defines a class Student that defines a student that implements a to_json with argument attr
+### 11-student.py
+defines a class Student that defines a student that implement serialize and deserialize methods
