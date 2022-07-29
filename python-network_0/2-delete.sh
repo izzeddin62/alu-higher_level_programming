@@ -1,3 +1,3 @@
 #!/bin/bash
-# print the length of the response
+# send a delete request
 curl -sX DELETE $1

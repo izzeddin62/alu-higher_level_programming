@@ -1,3 +1,3 @@
 #!/bin/bash
-# print the length of the response
+# print the the response when the response is 200
 curl -sL "$1"
