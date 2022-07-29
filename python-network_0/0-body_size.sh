@@ -1,2 +1,2 @@
 #!/bin/bash
-curl $1 | echo
+curl -s $1 | wc -m
