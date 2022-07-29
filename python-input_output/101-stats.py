@@ -11,7 +11,7 @@ try:
         if number_of_lines < 10:
             number_of_lines += 1
         else:
-            print(f"{size}")
+            print(f"File size: {size}")
             for i in sorted(codes):
                 print(f"{i}: {codes[i]}")
             number_of_lines = 1
@@ -24,10 +24,13 @@ try:
                     codes[str(code)] = 1
                 else:
                     codes[str(code)] = codes[str(code)] + 1
-        except (TypeError, Value):
+        except IndexError:
             pass
+        print(f"File size: {size}")
+        for i in sorted(codes):
+            print(f"{i}: {codes[i]}")
 except KeyboardInterrupt:
-    print(f"{size}")
+    print(f"File size: {size}")
     for i in sorted(codes):
         print(f"{i}: {codes[i]}")
     raise
