@@ -4,12 +4,12 @@
 
 def find_peak(list_of_integers):
     """return a peak element"""
-    r = len(list_of_integers) - 1
-    l = 0
-    while l < r:
-        mid = l + ((r - l) // 2)
+    right = len(list_of_integers) - 1
+    left = 0
+    while left < right:
+        mid = (left + ((right - left) // 2))
         if(list_of_integers[mid] < list_of_integers[mid + 1]):
-            l = mid + 1
+            left = mid + 1
         else:
-            r = mid
-    return r
+            right = mid
+    return list_of_integers[r]
