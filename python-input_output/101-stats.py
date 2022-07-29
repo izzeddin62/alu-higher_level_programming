@@ -27,7 +27,7 @@ try:
                     codes[str(code)] = 1
                 else:
                     codes[str(code)] = codes[str(code)] + 1
-        except IndexError:
+        except (IndexError, ValueError):
             pass
     print(f"File size: {size}")
     for i in sorted(codes):
