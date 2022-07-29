@@ -26,9 +26,9 @@ try:
                     codes[str(code)] = codes[str(code)] + 1
         except IndexError:
             pass
-        print(f"File size: {size}")
-        for i in sorted(codes):
-            print(f"{i}: {codes[i]}")
+    print(f"File size: {size}")
+    for i in sorted(codes):
+        print(f"{i}: {codes[i]}")
 except KeyboardInterrupt:
     print(f"File size: {size}")
     for i in sorted(codes):
