@@ -16,7 +16,10 @@ try:
                 print(f"{i}: {codes[i]}")
             number_of_lines = 1
         line_list = line.split()
-        size += int(line_list[-1])
+        try:
+            size += int(line_list[-1])
+        except TypeError:
+            pass
         try:
             code = int(line_list[-2])
             if code in accepted_codes:
