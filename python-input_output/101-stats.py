@@ -18,7 +18,7 @@ try:
         line_list = line.split()
         try:
             size += int(line_list[-1])
-        except TypeError:
+        except (TypeError, ValueError):
             pass
         try:
             code = int(line_list[-2])
