@@ -10,7 +10,6 @@ def append_after(filename="", search_string="", new_string=""):
         new_text = f.read()
         f.seek(0)
         for line in f:
-            print(search_string, line, search_string in line)
             if search_string in line:
                 pos = new_text.find(line)
                 insert_pos = new_text[:pos + len(line)]
