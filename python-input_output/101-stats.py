@@ -4,11 +4,11 @@ import sys
 
 accepted_codes = [200, 301, 400, 401, 403, 404, 405, 500]
 codes = {}
-number_of_lines = 1
+number_of_lines = 0
 size = 0
 try:
     for line in sys.stdin:
-        if number_of_lines <= 10:
+        if number_of_lines < 10:
             number_of_lines += 1
         else:
             print(f"{size}")
