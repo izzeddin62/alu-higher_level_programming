@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""send a request and get status"""
+"""send a request to a url and get status"""
 
 import urllib.request
 
