@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """the script get the status from intranet.hbtn.io"""
-
 import urllib.request
+
 
 """send a get request"""
 if __name__ = "__main__"
