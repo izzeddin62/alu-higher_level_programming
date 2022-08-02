@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """fetch data, get the status of a website using url and display the statu"""
+
+
 import urllib.request
 
 
