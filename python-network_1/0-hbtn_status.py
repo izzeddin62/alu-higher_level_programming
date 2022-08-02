@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """gets response header"""
 
-
 import urllib.request
 
 if __name__ == "__main__":
