@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" the script fetch data and get the status of a website using url """
+"""fetch data, get the status of a website using url and display the statu"""
 import urllib.request
 
 
