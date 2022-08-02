@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""gets response header"""
+"""send a request and get status and display it"""
 
 import urllib.request
 
