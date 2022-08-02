@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""fetch data, get the status of a website using url and display the status"""
+"""gets response header"""
 
 
 import urllib.request
