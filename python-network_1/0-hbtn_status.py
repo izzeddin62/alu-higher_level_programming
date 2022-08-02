@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""the script get the status from intranet.hbtn.io"""
+"""the script fetch data from intranet.hbtn.io
+    and get the status and display the data
+"""
 import urllib.request
 
 
 """send a get request"""
-if __name__ = "__main__"
+if __name__ == "__main__":
     with urllib.request.urlopen("https://intranet.hbtn.io/status") as res:
         body = res.read()
         print("Body response:")
