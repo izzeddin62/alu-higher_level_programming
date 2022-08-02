@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""the script fetch data from intranet.hbtn.io
-    and get the status and display the data
-"""
+""" the script fetch data from https://intranet.hbtn.io/status """
 import urllib.request
 
 
