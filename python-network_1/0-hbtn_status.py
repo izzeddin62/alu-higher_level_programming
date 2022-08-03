@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""get intranet status and display it using urllib
+"""get intranet status and display it using urllib"""
 
 import urllib.request
 
