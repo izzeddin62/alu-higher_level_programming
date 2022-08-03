@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""get intranet status"""
+"""get intranet status and disply it with the type"""
 
 import requests
 
