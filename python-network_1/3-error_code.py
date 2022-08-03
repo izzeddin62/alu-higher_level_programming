@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""send a get request to a url provided
-handle HttpError and display the error status"""
+"""send a get request to a url provided"""
 import urllib.request
 import urllib.error
 import sys
