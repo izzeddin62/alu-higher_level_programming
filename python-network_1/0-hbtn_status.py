@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-"""
-send a request to a url and get status.
-fetch from https://intranet.hbtn.io/status
-"""
 
 import urllib.request
-"""imported urllib"""
+
 if __name__ == "__main__":
     with urllib.request.urlopen("https://intranet.hbtn.io/status") as res:
         body = res.read()
