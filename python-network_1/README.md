@@ -7,3 +7,5 @@ a Python script that takes in a URL, sends a request to the URL and displays the
 a Python script that takes in a URL and an email, sends a POST request to the passed URL with the email as a parameter, and displays the body of the response
 ### 3-error_code.py
 Python script that takes in a URL, sends a request to the URL and displays the body of the response
+### 4-hbtn_status.py
+a Python script that fetches https://intranet.hbtn.io/status
