@@ -9,3 +9,5 @@ a Python script that takes in a URL and an email, sends a POST request to the pa
 Python script that takes in a URL, sends a request to the URL and displays the body of the response
 ### 4-hbtn_status.py
 a Python script that fetches https://intranet.hbtn.io/status
+### 5-hbtn_header.py
+a Python script that takes in a URL, sends a request to the URL and displays the value of the variable X-Request-Id in the response header
