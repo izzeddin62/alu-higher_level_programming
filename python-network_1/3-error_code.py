@@ -11,4 +11,4 @@ if __name__ == "__main__":
             body = res.read()
             print(body.decode("utf-8"))
     except urllib.error.HTTPError as error:
-        print(f"Error code: {error.status}")
+        print("Error code: {}".format(error.status))
