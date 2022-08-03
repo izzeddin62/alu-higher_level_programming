@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """get intranet status and display it using urllib"""
 
+import urllib.request
 
 if __name__ == "__main__":
-    import urllib.request
     with urllib.request.urlopen("https://intranet.hbtn.io/status") as res:
         body = res.read()
         print("Body response:")
