@@ -31,3 +31,5 @@ removes all records with a score <= 5 in the table second_table of the database 
 computes the score average of all records in the table second_table of the database hbtn_0c_0
 ### 15-groups.sql
 lists the number of records with the same score in the table second_table of the database hbtn_0c_0
+### 16-no_link.sql
+lists all records of the table second_table of the database hbtn_0c_0
