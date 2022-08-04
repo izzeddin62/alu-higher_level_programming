@@ -25,3 +25,5 @@ lists all records of the table second_table of the database hbtn_0c_0
 lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0
 ### 12-no_cheating.sql
 updates the score of Bob to 10 in the table second_table
+### 13-change_class.sql
+removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0
