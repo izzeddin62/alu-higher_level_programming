@@ -37,3 +37,5 @@ lists all records of the table second_table of the database hbtn_0c_0
 converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci)
 ### 101-avg_temperatures.sql
 displays the average temperature (Fahrenheit) by city ordered by temperature
+### 102-top_city.sql
+displays the top 3 of cities temperature during July and August ordered by temperature
