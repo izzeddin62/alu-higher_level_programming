@@ -27,3 +27,5 @@ lists all records with a score >= 10 in the table second_table of the database h
 updates the score of Bob to 10 in the table second_table
 ### 13-change_class.sql
 removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0
+### 14-average.sql
+computes the score average of all records in the table second_table of the database hbtn_0c_0
