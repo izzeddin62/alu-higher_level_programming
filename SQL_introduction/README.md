@@ -23,3 +23,5 @@ creates a table second_table in the database hbtn_0c_0 in your MySQL server and 
 lists all records of the table second_table of the database hbtn_0c_0
 ### 11-best_score.sql
 lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0
+### 12-no_cheating.sql
+updates the score of Bob to 10 in the table second_table
