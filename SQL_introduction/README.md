@@ -29,3 +29,5 @@ updates the score of Bob to 10 in the table second_table
 removes all records with a score <= 5 in the table second_table of the database hbtn_0c_0
 ### 14-average.sql
 computes the score average of all records in the table second_table of the database hbtn_0c_0
+### 15-groups.sql
+lists the number of records with the same score in the table second_table of the database hbtn_0c_0
