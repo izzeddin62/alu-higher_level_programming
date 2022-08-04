@@ -39,3 +39,5 @@ converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci)
 displays the average temperature (Fahrenheit) by city ordered by temperature
 ### 102-top_city.sql
 displays the top 3 of cities temperature during July and August ordered by temperature
+### 103-max_state.sql
+displays the max temperature of each state
