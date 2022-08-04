@@ -15,3 +15,5 @@ prints the full description of the table first_table from the database hbtn_0c_0
 lists all rows of the table first_table from the database hbtn_0c_0
 ### 7-insert_value.sql
 inserts a new row in the table first_table
+### 8-count_89.sql
+displays the number of records with id = 89 in the table first_table of the database hbtn_0c_0
