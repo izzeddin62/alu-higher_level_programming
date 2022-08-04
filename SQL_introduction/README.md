@@ -21,3 +21,5 @@ displays the number of records with id = 89 in the table first_table of the data
 creates a table second_table in the database hbtn_0c_0 in your MySQL server and add multiples rows.
 ### 10-top_score.sql
 lists all records of the table second_table of the database hbtn_0c_0
+### 11-best_score.sql
+lists all records with a score >= 10 in the table second_table of the database hbtn_0c_0
