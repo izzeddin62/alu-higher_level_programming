@@ -33,3 +33,5 @@ computes the score average of all records in the table second_table of the datab
 lists the number of records with the same score in the table second_table of the database hbtn_0c_0
 ### 16-no_link.sql
 lists all records of the table second_table of the database hbtn_0c_0
+### 100-move_to_utf8.sql
+converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci)
