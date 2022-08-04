@@ -7,3 +7,5 @@ creates the database hbtn_0c_0
 deletes the database hbtn_0c_0 in your MySQL server
 ### 3-list_tables.sql
 lists all the tables of a database
+### 4-first_table.sql
+creates a table called first_table in the current database
