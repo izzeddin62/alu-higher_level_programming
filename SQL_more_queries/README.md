@@ -15,3 +15,5 @@ creates the table unique_id on your MySQL server.
 creates the database hbtn_0d_usa and the table states
 ### 7-cities.sql
 creates the database hbtn_0d_usa and the table cities
+### 8-cities_of_california_subquery.sql
+lists all the cities of California that can be found in the database hbtn_0d_usa
