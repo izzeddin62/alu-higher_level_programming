@@ -7,3 +7,5 @@ creates the MySQL server user user_0d_1
 creates the database hbtn_0d_2 and the user user_0d_2
 ### 3-force_name.sql
 creates the table force_name on your MySQL server.
+### 4-never_empty.sql
+creates the table id_not_null
