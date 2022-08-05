@@ -35,3 +35,5 @@ lists all Comedy shows in the database hbtn_0d_tvshows.
 lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows
 ### tv_genres.name
 list all genres not linked to the show Dexter
+### 101-not_a_comedy.sql
+ lists all shows without the genre Comedy in the database hbtn_0d_tvshows
