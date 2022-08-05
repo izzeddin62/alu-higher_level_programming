@@ -33,3 +33,5 @@ lists all genres of the show Dexter
 lists all Comedy shows in the database hbtn_0d_tvshows.
 ### 16-shows_by_genre.sql
 lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows
+### tv_genres.name
+list all genres not linked to the show Dexter
