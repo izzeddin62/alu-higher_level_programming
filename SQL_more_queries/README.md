@@ -11,3 +11,7 @@ creates the table force_name on your MySQL server.
 creates the table id_not_null
 ### 5-unique_id.sql
 creates the table unique_id on your MySQL server.
+### 6-states.sql
+creates the database hbtn_0d_usa and the table states
+### 7-cities.sql
+creates the database hbtn_0d_usa and the table cities
