@@ -9,3 +9,5 @@ a function that prints My name is <first name> <last name>
 a function that prints a square with the character #
 ### 5-text_indentation.py
 a function that prints a text with 2 new lines after each of these characters: ., ? and :
+### 6-max_integer_test.py
+unit test for max_integer function
