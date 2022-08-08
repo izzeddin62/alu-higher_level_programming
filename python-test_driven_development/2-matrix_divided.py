@@ -12,6 +12,7 @@ def matrix_divided(matrix, div):
     try:
         return [[round(j / div, 2) for j in i] for i in matrix]
     except TypeError:
-        raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+        message = 'matrix must be a matrix (list of lists) of integers/floats'
+        raise TypeError(message)
     except ZeroDivisionError:
         raise ZeroDivisionError('division by zero')
