@@ -19,3 +19,11 @@ TypeError: b must be an integer
 8
 >>> add_integer(4, 4.4)
 8
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+>>> add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
