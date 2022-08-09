@@ -11,3 +11,5 @@ a function that prints a square with the character #
 a function that prints a text with 2 new lines after each of these characters: ., ? and :
 ### 6-max_integer_test.py
 unit test for max_integer function
+### 100-matrix_mul.py
+a function that multiplies 2 matrices
