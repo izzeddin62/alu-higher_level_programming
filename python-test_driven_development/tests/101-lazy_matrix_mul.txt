@@ -53,7 +53,7 @@ Traceback (most recent call last):
 ValueError: m_a and m_b can't be multiplied
 >>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
 array([[ 7, 10],
-           [15, 22]])
+       [15, 22]])
 >>> lazy_matrix_mul()
 Traceback (most recent call last):
 ...
