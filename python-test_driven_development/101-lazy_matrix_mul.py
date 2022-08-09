@@ -43,4 +43,4 @@ def lazy_matrix_mul(m_a, m_b):
             raise TypeError("each row of m_b must be of the same size")
     if len(m_a[0]) != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
-    return np.matmul(m_a, m_b).tolist() 
+    return np.matmul(m_a, m_b) 
