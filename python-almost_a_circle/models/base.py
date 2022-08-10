@@ -17,5 +17,7 @@ class Base:
             self.id = Base.__nb_objects
 
     def to_json_string(list_dictionaries):
+        if list_dictionaries is None:
+            return "[]"
         """returns json representation"""
         return json.dumps(list_dictionaries)
