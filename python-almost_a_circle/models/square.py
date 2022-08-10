@@ -3,7 +3,6 @@
 from models.rectangle import Rectangle
 
 
-
 class Square(Rectangle):
     """defines square instances"""
 
@@ -13,4 +12,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """return a square string"""
-        return "[Sqaure] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(
+                                                 self.id,
+                                                 self.x,
+                                                 self.y,
+                                                 self.width)

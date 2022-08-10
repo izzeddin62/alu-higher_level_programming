@@ -21,4 +21,4 @@ if __name__ == "__main__":
     s3 = Square(3, 1, 3)
     print(s3)
     print(s3.area())
-    s3.display()
+    s3.display()    
