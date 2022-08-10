@@ -86,13 +86,20 @@ class Rectangle(Base):
                                                        self.height)
         return text
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update all or some rectangle attribute"""
         try:
-            self.id = args[0]
-            self.width = args[1]
-            self.height = args[2]
-            self.x = args[3]
-            self.y = args[4]
+            if type(args) == tuple and len(args) > 0:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            elif kwargs:
+                self.id = kwargs.get('id')
+                self.width = kwargs.get('width')
+                self.height = kwargs.get('height')
+                self.x = kwargs.get('x')
+                self.y = kwargs.get('y')
         except Exception:
             pass
