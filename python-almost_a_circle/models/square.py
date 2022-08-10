@@ -27,26 +27,27 @@ class Square(Rectangle):
                 self.width = args[1]
                 self.height = args[1]
                 self.x = args[2]
-                self.y = args[3]  
+                self.y = args[3]
             else:
                 try:
                     self.size = kwargs.get('size')
                 except Exception:
                     pass
                 try:
-                   self.x = kwargs.get('x')
+                    self.x = kwargs.get('x')
                 except Exception:
-                   pass
+                    pass
                 try:
-                    y=kwargs.get('y')
-                except:
+                    self.y = kwargs.get('y')
+                except Exception:
                     pass
                 try:
                     self.id = kwargs['id']
-                except:
+                except Exception:
                     pass
         except Exception:
             pass
+
     def __str__(self):
         """return a square string"""
         return "[Square] ({}) {}/{} - {}".format(
