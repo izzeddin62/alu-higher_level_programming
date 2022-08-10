@@ -5,7 +5,9 @@
 class Base:
     """create base instant"""
     __nb_objects = 0
+
     def __init__(self, id=None):
+        """instantiate base instance"""
         if id is not None:
             self.id = id
         else:
