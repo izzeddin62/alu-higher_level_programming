@@ -8,8 +8,7 @@ class TestBase(unittest.TestCase):
         base = Base()
         base2 = Base()
         self.assertEqual(str(type(base)), "<class 'models.base.Base'>")
-        self.assertEqual(base.id, 1)
-        self.assertEqual(base2.id, 2)
+        self.assertEqual(base.id, base2.id - 1)
 
 if __name__ == "__main__":
     unittest.main()
