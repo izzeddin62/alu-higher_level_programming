@@ -138,3 +138,14 @@ class TestRectangle(unittest.TestCase):
         shape.update(id=8, width=89, height=100, x=9, y=28)
         self.assertEqual(shape.y, 28)
         
+    def test_rectangle_create(self):
+        shape = Rectangle.create(**{ 'id': 89})
+        self.assertEqual(shape.to_dictionary(), {'id': 89, 'width': 1, 'height': 1, 'x': 0, 'y': 0})
+        shape = Rectangle.create(**{ 'id': 22, 'width': 12})
+        self.assertEqual(shape.to_dictionary(), {'id': 22, 'width': 12, 'height': 1, 'x': 0, 'y': 0})
+        shape = Rectangle.create(**{ 'id': 8, 'width': 45, 'height': 34 })
+        self.assertEqual(shape.to_dictionary(), {'id': 8, 'width': 45, 'height': 34, 'x': 0, 'y': 0})
+        shape = Rectangle.create(**{ 'id': 4, 'width': 19, 'height': 25, 'x': 33 })
+        self.assertEqual(shape.to_dictionary(), {'id': 4, 'width': 19, 'height': 25, 'x': 33, 'y': 0})
+        shape = Rectangle.create(**{ 'id': 1, 'width': 29, 'height': 45, 'x': 23, 'y': 100 })
+        self.assertEqual(shape.to_dictionary(), {'id': 1, 'width': 29, 'height': 45, 'x': 23, 'y': 100})
