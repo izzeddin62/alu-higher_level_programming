@@ -114,4 +114,27 @@ class TestRectangle(unittest.TestCase):
     def test_to_dictionary(self):
         shape = Rectangle(2, 2)
         self.assertEqual(shape.to_dictionary(), {"id": 1, 'width': 2, 'height': 2, 'x': 0, 'y': 0})
+
+    def test_update(self):
+        shape = Rectangle(2, 2)
+        shape.update(10)
+        self.assertEqual(shape.id, 10)
+        shape.update(10, 30)
+        self.assertEqual(shape.width, 30)
+        shape.update(2, 2, 3)
+        self.assertEqual(shape.height, 3)
+        shape.update(2, 2, 3, 10)
+        self.assertEqual(shape.x, 10)
+        shape.update(2, 2, 2, 2, 22)
+        self.assertEqual(shape.y, 22)
+        shape.update(**{"id": 24})
+        self.assertEqual(shape.id, 24)
+        shape.update(id=15, width=10)
+        self.assertEqual(shape.width, 10)
+        shape.update(id=15, width=10, height=14)
+        self.assertEqual(shape.height, 14)
+        shape.update(id=12, width=34, height=2, x=5)
+        self.assertEqual(shape.x, 5)
+        shape.update(id=8, width=89, height=100, x=9, y=28)
+        self.assertEqual(shape.y, 28)
         
