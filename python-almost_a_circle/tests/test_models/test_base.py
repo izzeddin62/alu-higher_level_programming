@@ -10,5 +10,9 @@ class TestBase(unittest.TestCase):
         self.assertEqual(str(type(base)), "<class 'models.base.Base'>")
         self.assertEqual(base.id, base2.id - 1)
 
+    def test_id_given(self):
+        base = Base(34)
+        self.assertEqual(base.id, 34)
+
 if __name__ == "__main__":
     unittest.main()
