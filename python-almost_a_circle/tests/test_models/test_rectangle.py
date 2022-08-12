@@ -1,17 +1,19 @@
 #!/usr/bin/python3
 import unittest
+from models.base import Base
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
 
     def setUp(self):
-        Rectangle.__nb_objects = 0
+        Base._Base__nb_objects = 0
         
     def test_right_argument(self):
         rect_1 = Rectangle(4, 2)
         rect_2 = Rectangle(2, 3, 8)
         rect_3 = Rectangle(2, 3, 8, 4)
+        rect_4 = Rectangle(2, 3, 7, 3, 5)
         self.assertEqual(rect_1.x, 0)
         self.assertEqual(rect_1.y, 0)
         self.assertEqual(rect_1.width, 4)
@@ -20,6 +22,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rect_1.y, 0)
         self.assertEqual(rect_3.x, 8)
         self.assertEqual(rect_3.y, 4)
+        self.assertEqual(rect_4.id, 5)
 
     def test_no_position_argument_type(self):
         with self.assertRaises(TypeError) as error:
@@ -82,3 +85,13 @@ class TestRectangle(unittest.TestCase):
             Rectangle(4, 4, 5, 'er')
         message = "y must be an integer"
         self.assertEqual(str(error.exception), message)
+
+    def test_area(self):
+        rect_1 = Rectangle(2, 2)
+        self.assertEqual(rect_1.area(), 4)
+
+    def test_str(self):
+        shape = Rectangle(2, 2)
+        shape2 = Rectangle(2, 5, 1, 3)
+        self.assertEqual(str(shape), "[Rectangle] (1) 0/0 - 2/2")
+        self.assertEqual(str(shape2), "[Rectangle] (2) 1/3 - 2/5")
