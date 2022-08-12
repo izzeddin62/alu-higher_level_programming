@@ -49,3 +49,12 @@ class Base:
             shape = cls(1, 1)
         shape.update(**dictionary)
         return shape
+
+    @classmethod
+    def load_from_file(cls):
+        try:
+            with open(cls.__name__ + '.json') as f:
+                text = f.read()
+                return [cls.create(**i) for i in cls.from_json_string(text)]
+        except FileNotFoundError:
+            return []
