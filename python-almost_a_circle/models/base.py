@@ -39,3 +39,13 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """create base instance"""
+        if cls.__name__ == 'Square':
+            shape = cls(1)
+        else:
+            shape = cls(1, 1)
+        shape.update(**dictionary)
+        return shape
