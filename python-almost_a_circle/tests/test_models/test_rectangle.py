@@ -110,4 +110,8 @@ class TestRectangle(unittest.TestCase):
         mock_print.reset_mock()
         shape_3.display()
         self.assertEqual(mock_print.mock_calls, [call(""), call("##"), call("##")])
+
+    def test_to_dictionary(self):
+        shape = Rectangle(2, 2)
+        self.assertEqual(shape.to_dictionary(), {"id": 1, 'width': 2, 'height': 2, 'x': 0, 'y': 0})
         
