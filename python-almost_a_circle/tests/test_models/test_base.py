@@ -23,5 +23,11 @@ class TestBase(unittest.TestCase):
         self.assertEqual(empty_list, "[]")
         self.assertEqual(list_el, '[{"id": 1}]')
 
+    def test_from_json_string(self):
+        self.assertEqual(Base.from_json_string(None), [])
+        self.assertEqual(Base.from_json_string("[]"), [])
+        dict_rep = Base.from_json_string('[{"id": 1}]')
+        self.assertEqual(dict_rep, [{"id": 1}])
+
 if __name__ == "__main__":
     unittest.main()
