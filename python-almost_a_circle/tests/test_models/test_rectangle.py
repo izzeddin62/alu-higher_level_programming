@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import unittest
-from unittest.mock import patch
+from unittest.mock import patch, call
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -98,7 +98,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(str(shape2), "[Rectangle] (2) 1/3 - 2/5")
 
     @patch("builtins.print")
-    def test_display(self, assert_mock):
+    def test_display(self, mock_print):
         shape = Rectangle(2, 2)
+        shape_2 = Rectangle(2, 2, 3)
+        shape_3 = Rectangle(2, 2, 0, 1)
         shape.display()
-        assert_mock.assert_called_with('##')
+        self.assertEqual(mock_print.mock_calls, [call("##"), call("##")])
+        mock_print.reset_mock()
+        shape_2.display()
+        self.assertEqual(mock_print.mock_calls, [call("   ##"), call("   ##")])
+        mock_print.reset_mock()
+        shape_3.display()
+        self.assertEqual(mock_print.mock_calls, [call(""), call("##"), call("##")])
+        
