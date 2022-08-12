@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import unittest
+from unittest.mock import patch
 from models.base import Base
 from models.rectangle import Rectangle
 
@@ -95,3 +96,9 @@ class TestRectangle(unittest.TestCase):
         shape2 = Rectangle(2, 5, 1, 3)
         self.assertEqual(str(shape), "[Rectangle] (1) 0/0 - 2/2")
         self.assertEqual(str(shape2), "[Rectangle] (2) 1/3 - 2/5")
+
+    @patch("builtins.print")
+    def test_display(self, assert_mock):
+        shape = Rectangle(2, 2)
+        shape.display()
+        assert_mock.assert_called_with('##')
