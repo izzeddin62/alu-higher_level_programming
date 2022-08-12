@@ -3,6 +3,9 @@ import unittest
 from models.base import Base
 
 class TestBase(unittest.TestCase):
+
+    def setUp(self):
+        Base.__nb_objects = 0
     def test_initialization(self):
         """test when not id is passed the base is initialized with the class id"""
         base = Base()
