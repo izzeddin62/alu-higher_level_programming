@@ -31,3 +31,11 @@ class Base:
             dict_list = [i.to_dictionary() for i in list_objs]
         with open(cls.__name__ + '.json', 'w', encoding='utf-8') as f:
             f.write(Base.to_json_string(dict_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """convert json to list"""
+        if json_string is None:
+            return []
+        else:
+            return json.dumps(json_string)
