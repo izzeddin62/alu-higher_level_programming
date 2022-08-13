@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import unittest
+import os
 from unittest.mock import patch, call
 from models.base import Base
 from models.rectangle import Rectangle
@@ -9,6 +10,13 @@ class TestRectangle(unittest.TestCase):
 
     def setUp(self):
         Base._Base__nb_objects = 0
+
+    @classmethod
+    def tearDown(self):
+        try:
+            os.remove('Rectangle.json')
+        except IOError:
+            pass
         
     def test_right_argument(self):
         rect_1 = Rectangle(4, 2)
@@ -149,3 +157,18 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(shape.to_dictionary(), {'id': 4, 'width': 19, 'height': 25, 'x': 33, 'y': 0})
         shape = Rectangle.create(**{ 'id': 1, 'width': 29, 'height': 45, 'x': 23, 'y': 100 })
         self.assertEqual(shape.to_dictionary(), {'id': 1, 'width': 29, 'height': 45, 'x': 23, 'y': 100})
+
+    def test_save_to_file(self):
+        Rectangle.save_to_file(None)
+        with open('Rectangle.json', 'r', encoding="utf-8") as f:
+            text = f.read()
+        self.assertEqual(text, '[]')
+        Rectangle.save_to_file([])
+        with open('Rectangle.json', 'r', encoding="utf-8") as f:
+            text = f.read()
+        self.assertEqual(text, '[]')
+        shape = Rectangle(2, 2)
+        Rectangle.save_to_file([shape])
+        with open('Rectangle.json', 'r', encoding="utf-8") as f:
+            text = f.read()
+            self.assertEqual(Base.from_json_string(text), [{ 'id': 1, 'width': 2, 'height': 2, 'x': 0, 'y': 0}])  
