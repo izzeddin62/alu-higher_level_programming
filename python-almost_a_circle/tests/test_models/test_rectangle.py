@@ -163,12 +163,24 @@ class TestRectangle(unittest.TestCase):
         with open('Rectangle.json', 'r', encoding="utf-8") as f:
             text = f.read()
         self.assertEqual(text, '[]')
-        Rectangle.save_to_file([])
-        with open('Rectangle.json', 'r', encoding="utf-8") as f:
-            text = f.read()
-        self.assertEqual(text, '[]')
         shape = Rectangle(2, 2)
         Rectangle.save_to_file([shape])
         with open('Rectangle.json', 'r', encoding="utf-8") as f:
             text = f.read()
             self.assertEqual(Base.from_json_string(text), [{ 'id': 1, 'width': 2, 'height': 2, 'x': 0, 'y': 0}])  
+
+    def test_save_to_file_empy_list(self):
+        Rectangle.save_to_file([])
+        with open('Rectangle.json', 'r', encoding="utf-8") as f:
+            text = f.read()
+        self.assertEqual(text, '[]')
+
+    def test_load_from_file_no_file(self):
+        shapes = Rectangle.load_from_file()
+        self.assertEqual(shapes, [])
+
+    def test_load_from_file_file_exists(self):
+        shape = Rectangle(2, 2)
+        Rectangle.save_to_file([shape])
+        returnedShape = Rectangle.load_from_file()
+        self.assertEqual(returnedShape[0].to_dictionary(), shape.to_dictionary())
