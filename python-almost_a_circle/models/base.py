@@ -2,7 +2,7 @@
 """Base class module"""
 
 import json
-
+import csv
 
 class Base:
     """create base instant"""
@@ -32,6 +32,19 @@ class Base:
         with open(cls.__name__ + '.json', 'w', encoding='utf-8') as f:
             f.write(Base.to_json_string(dict_list))
 
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        if list_objs is not None:
+            if cls.__name__ == "Square":
+                dict_list = [['id', 'size', 'x', 'y']]
+                dict_list.extend([[i.id,i.size, i.x, i.y] for i in list_objs])
+            else:
+                dict_list = [['id', 'width', 'height', 'x', 'y']]
+                dict_list.extend([[i.id,i.width,i.height, i.x, i.y] for i in list_objs])
+        with open(cls.__name__ + '.csv', 'w', encoding='utf-8') as f:
+            writer = csv.writer(f)
+            writer.writerows(dict_list)
+        
     @staticmethod
     def from_json_string(json_string):
         """convert json to list"""
@@ -56,5 +69,17 @@ class Base:
             with open(cls.__name__ + '.json') as f:
                 text = f.read()
                 return [cls.create(**i) for i in cls.from_json_string(text)]
+        except FileNotFoundError:
+            return []
+
+    @classmethod
+    def load_from_file_csv(cls):
+        try:
+            with open(cls.__name__ + '.csv') as f:
+                text_dict = csv.DictReader(f)
+                if cls.__name__ == 'Square':
+                    return [cls.create(**{ 'id': int(i['id']), 'size': int(i['size']), 'x': int(i['x']), 'y': int(i['y']) }) for i in text_dict]
+                else:
+                    return [cls.create(**{ 'id': int(i['id']), 'width': int(i['width']), 'height': int(i['height']), 'x': int(i['x']), 'y': int(i['y']) }) for i in text_dict]
         except FileNotFoundError:
             return []
