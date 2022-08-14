@@ -4,6 +4,7 @@
 import json
 import csv
 
+
 class Base:
     """create base instant"""
     __nb_objects = 0
@@ -37,14 +38,15 @@ class Base:
         if list_objs is not None:
             if cls.__name__ == "Square":
                 dict_list = [['id', 'size', 'x', 'y']]
-                dict_list.extend([[i.id,i.size, i.x, i.y] for i in list_objs])
+                dict_list.extend([[i.id, i.size, i.x, i.y] for i in list_objs])
             else:
                 dict_list = [['id', 'width', 'height', 'x', 'y']]
-                dict_list.extend([[i.id,i.width,i.height, i.x, i.y] for i in list_objs])
+                c_li = [[i.id, i.width, i.height, i.x, i.y] for i in list_objs]
+                dict_list.extend(c_li)
         with open(cls.__name__ + '.csv', 'w', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerows(dict_list)
-        
+
     @staticmethod
     def from_json_string(json_string):
         """convert json to list"""
@@ -78,8 +80,17 @@ class Base:
             with open(cls.__name__ + '.csv') as f:
                 text_dict = csv.DictReader(f)
                 if cls.__name__ == 'Square':
-                    return [cls.create(**{ 'id': int(i['id']), 'size': int(i['size']), 'x': int(i['x']), 'y': int(i['y']) }) for i in text_dict]
+                    return [cls.create(**{'id': int(i['id']),
+                                          'size': int(i['size']),
+                                          'x': int(i['x']),
+                                          'y': int(i['y'])
+                                          }) for i in text_dict]
                 else:
-                    return [cls.create(**{ 'id': int(i['id']), 'width': int(i['width']), 'height': int(i['height']), 'x': int(i['x']), 'y': int(i['y']) }) for i in text_dict]
+                    return [cls.create(**{'id': int(i['id']),
+                                          'width': int(i['width']),
+                                          'height': int(i['height']),
+                                          'x': int(i['x']),
+                                          'y': int(i['y'])
+                                          }) for i in text_dict]
         except FileNotFoundError:
             return []
