@@ -5,6 +5,7 @@ import json
 import csv
 import turtle
 
+
 class Base:
     """create base instant"""
     __nb_objects = 0
@@ -96,7 +97,7 @@ class Base:
             return []
 
     @staticmethod
-    def draw(list_rectangles, list_squares): 
+    def draw(list_rectangles, list_squares):
         t = turtle.Turtle()
         for i in list_rectangles + list_squares:
             t.pensize(20)
@@ -113,4 +114,3 @@ class Base:
             t.fd(i.height)
             t.end_fill()
             screen = turtle.getscreen()
-
