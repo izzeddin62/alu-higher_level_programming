@@ -3,7 +3,7 @@
 
 import json
 import csv
-
+import turtle
 
 class Base:
     """create base instant"""
@@ -94,3 +94,11 @@ class Base:
                                           }) for i in text_dict]
         except FileNotFoundError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        screen = turtle.getscreen()
+        pen = turtle.turtle()
+        
+
+
