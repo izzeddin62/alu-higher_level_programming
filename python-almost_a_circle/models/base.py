@@ -96,9 +96,21 @@ class Base:
             return []
 
     @staticmethod
-    def draw(list_rectangles, list_squares):
-        screen = turtle.getscreen()
-        pen = turtle.turtle()
-        
-
+    def draw(list_rectangles, list_squares): 
+        t = turtle.Turtle()
+        for i in list_rectangles + list_squares:
+            t.pensize(20)
+            t.penup()
+            t.setpos(i.x, i.y)
+            t.pendown()
+            t.begin_fill()
+            t.fd(i.width)
+            t.right(90)
+            t.fd(i.height)
+            t.right(90)
+            t.fd(i.width)
+            t.right(90)
+            t.fd(i.height)
+            t.end_fill()
+            screen = turtle.getscreen()
 
