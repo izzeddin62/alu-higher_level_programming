@@ -14,6 +14,6 @@ if __name__ == '__main__':
                          db=db_name)
     cur = db.cursor()
     cur.execute("SELECT * FROM states")
-    rows  = cur.fetchall()
+    rows = cur.fetchall()
     for row in rows:
         print(row)
