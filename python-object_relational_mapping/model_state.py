@@ -10,4 +10,4 @@ class State(Base):
     """State model class for the states table"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
-    name =  Column(String(128), nullable=false)
+    name =  Column(String(128), nullable=False)
