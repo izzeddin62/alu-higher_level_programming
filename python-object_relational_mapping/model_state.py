@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""state model for states"""
+"""module for the states table model"""
 
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
 
 class State(Base):
-    """State model class"""
+    """State model class for the states table"""
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name =  Column(String(128), nullable=false)
