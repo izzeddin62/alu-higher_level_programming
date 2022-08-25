@@ -8,7 +8,7 @@ from sys import argv
 if __name__ == '__main__':
     user = argv[1]
     password = argv[2]
-    db_name = argv[3] 
+    db_name = argv[3]
     db = 'mysql+mysqldb://{}:{}@localhost/{}'.format(user, password, db_name)
     engine = create_engine(db, pool_pre_ping=True)
     Base.metadata.create_all(engine)
