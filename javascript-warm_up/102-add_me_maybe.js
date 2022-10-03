@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const addMeMaybe = function (number, theFunction) {
-  theFunction(number++);
+  theFunction(++number);
 };
 module.exports = {
   addMeMaybe
