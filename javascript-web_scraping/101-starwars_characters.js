@@ -10,7 +10,7 @@ function logCharacter (characters, i) {
     return;
   }
   request.get(characters[i], (error, res, data) => {
-    if (error) console.log(err);
+    if (error) console.log(error);
     console.log(JSON.parse(data).name);
     logCharacter(characters, i + 1);
   });
