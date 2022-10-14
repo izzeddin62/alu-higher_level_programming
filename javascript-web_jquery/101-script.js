@@ -6,4 +6,7 @@ $(document).ready(() => {
   $('div#remove_item').click(() => {
     $('li').last().remove();
   });
+  $('div#clear_list').click(() => {
+    $('ul.my_list').empty();
+  });
 });
